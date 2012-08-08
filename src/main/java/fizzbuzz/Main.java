@@ -49,7 +49,7 @@ public class Main {
         if (matcher.find()) {
             String numStr = matcher.group();
             BigInteger num = new BigInteger(numStr);
-            if (num.remainder(new BigInteger("3")).equals(new BigInteger("0"))) {
+            if (num.remainder(new BigInteger("3")).equals(BigInteger.ZERO)) {
                 response = "Fizz";
             }
             if (numStr.endsWith("5") || numStr.endsWith("0")) {
