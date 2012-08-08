@@ -18,6 +18,7 @@ package fizzbuzz;
 public class MainTest extends junit.framework.TestCase {
     public void testFizzBuzz() throws Exception {
         assertEquals("Fizz", Main.fizzBuzz("@fizzbuzz 3"));
+        assertEquals("Fizz", Main.fizzBuzz("@fizzbuzz 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"));
         assertEquals("Buzz", Main.fizzBuzz("@fizzbuzz 5"));
         assertEquals("Fizz Buzz", Main.fizzBuzz("@fizzbuzz 15"));
         assertEquals("", Main.fizzBuzz("@fizzbuzz 16"));

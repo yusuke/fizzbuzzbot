@@ -17,6 +17,7 @@ package fizzbuzz;
 
 import twitter4j.*;
 
+import java.math.BigInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,11 +47,12 @@ public class Main {
         String response = "";
         Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {
-            int num = Integer.valueOf(matcher.group());
-            if (num % 3 == 0) {
+            String numStr = matcher.group();
+            BigInteger num = new BigInteger(numStr);
+            if (num.remainder(new BigInteger("3")).equals(new BigInteger("0"))) {
                 response = "Fizz";
             }
-            if (num % 5 == 0) {
+            if (numStr.endsWith("5") || numStr.endsWith("0")) {
                 response+=" Buzz";
             }
         }
